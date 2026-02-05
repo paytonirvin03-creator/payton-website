@@ -14,19 +14,32 @@ function initModel(containerId, color, isShield) {
     // 2. Create Geometry
     let geometry;
     if (isShield) {
-        // Shield Shape using LatheGeometry
-        const points = [];
-        // Create a "curved disk" profile
-        for (let i = 0; i <= 10; i++) {
-            // x = radius, y = depth/height
-            const x = i * 0.15; 
-            const y = Math.pow(i * 0.1, 2); // Slight curve for the front face
-            points.push(new THREE.Vector2(x, y));
-        }
-        // Add a small rim at the edge
-        points.push(new THREE.Vector2(1.6, 0.1)); 
+        // 1. Define the 2D Shape of a Medieval Shield
+        const shape = new THREE.Shape();
+        
+        // Start at top-left
+        shape.moveTo(-1, 1.2); 
+        // Top edge
+        shape.lineTo(1, 1.2);  
+        // Right side
+        shape.lineTo(1, 0);   
+        // Bottom point (quadratic curve for the shield "V" shape)
+        shape.quadraticCurveTo(1, -1.2, 0, -1.5);
+        shape.quadraticCurveTo(-1, -1.2, -1, 0);
+        // Back to start
+        shape.lineTo(-1, 1.2);
 
-        geometry = new THREE.LatheGeometry(points, 32);
+        // 2. Extrude the shape to give it thickness
+        const extrudeSettings = {
+            steps: 2,
+            depth: 0.2,
+            bevelEnabled: true,
+            bevelThickness: 0.1,
+            bevelSize: 0.1,
+            bevelSegments: 3
+        };
+
+        geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
     } else {
         // Kali/Tech Representation (Icosahedron/Wireframe)
         geometry = new THREE.IcosahedronGeometry(1, 1);
@@ -35,6 +48,8 @@ function initModel(containerId, color, isShield) {
     const material = new THREE.MeshPhongMaterial({
         color: color,
         wireframe: true,
+        emissive: color,
+        emissiveIntensity: 0.5,
         side: THREE.DoubleSide
     });
 
@@ -43,7 +58,7 @@ function initModel(containerId, color, isShield) {
 
     // Rotate so the front of the shield faces the camera initially
     if (isShield) {
-        mesh.rotation.x = Math.PI / 2;
+        mesh.rotation.y = Math.PI; // Flip to face forward
     }
 
     // 3. Lighting
