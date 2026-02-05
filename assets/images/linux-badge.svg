@@ -1,0 +1,4 @@
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="35" fill="#00ff88" stroke="#000" stroke-width="2"/>
+  <text x="40" y="45" text-anchor="middle" fill="white" font-size="10">cat linux.txt</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" width="280" height="200">
+  <defs>
+    <linearGradient id="g4" x1="0" x2="1">
+      <stop offset="0" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#0b5fff"/>
+    </linearGradient>
+    <filter id="f4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0b5fff" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <g filter="url(#f4)">
+    <rect x="6" y="12" width="128" height="76" rx="8" fill="#071029"/>
+    <rect x="10" y="16" width="120" height="68" rx="6" fill="#fff" opacity="0.03"/>
+    <g fill="#e6f0ff" font-family="monospace" font-size="10">
+      <text x="14" y="30">$ python3 port_scan.py 10.0.0.1</text>
+      <text x="14" y="46">Scanning ports 1-1024...</text>
+      <text x="14" y="62">22/tcp open  — ssh</text>
+      <text x="14" y="78">80/tcp open  — http</text>
+    </g>
+    <circle cx="116" cy="28" r="8" fill="url(#g4)" opacity="0.95" />
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">Payton Irvin</a>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="content">
+        <h1>Hi — I'm Payton Irvin</h1>
+        <p class="lead">Aspiring IT and cybersecurity professional with full-time enterprise IT experience while balancing a full-time academic schedule, bringing strong skills in system configuration, troubleshooting, root-cause analysis, ticket management, and security policy enforcement. Currently working as a Helpdesk Associate II at State Street Global Advisors, providing global IT support including account and access management, MFA troubleshooting (RSA SecurID and Microsoft Authenticator), and extensive Active Directory administration. Experienced with Microsoft Azure and Intune for device management, security compliance, and user support, while leveraging ServiceNow and Genesys to resolve incidents and support users worldwide. Academic and hands-on experience spans penetration testing, cryptography, systems administration, digital forensics, firewalls, and secure programming, with proficiency in Python and Bash scripting.</p>
+        <p class="lead">I am also using TryHackMe to gain SOC experience and practical blue/red team skills.</p>
+        <p><a class="btn" href="projects.html">View Projects</a> <a class="btn btn-outline" href="contact.html">Get in touch</a></p>
+        <p class="muted-contact">payton.irvin03@gmail.com | (314) 707-4413 | <a href="https://www.linkedin.com/in/paytonirvin" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+      <div class="art">
+        <img src="assets/images/hex3d.svg" alt="Hex 3D art" class="three-d">
+      </div>
+    </section>
+
+    <section>
+      <h2>Spinning Model Projects</h2>
+      <div class="model-grid">
+        <div class="model-card">
+          <div id="shield-3d" class="model-canvas"></div>
+          <p class="model-title">Spinning Vortex</p>
+        </div>
+        <div class="model-card">
+          <div id="kali-3d" class="model-canvas"></div>
+          <p class="model-title">Sphere (spinning)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Payton Irvin — Built with plain HTML/CSS/JS</p>
+    </div>
+  </footer>
+
+    <script type="module" src="js/three-models.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

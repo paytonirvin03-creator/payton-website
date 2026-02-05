@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Payton Irvin</a>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Projects</h1>
+    <div class="grid">
+      <article class="card">
+        <h3>ComptiA networking labs complete</h3>
+        <p>All CompTIA networking labs have been completed, including:</p>
+        <ul>
+          <li>Identifying and describing network topologies and infrastructure</li>
+          <li>Configuring and troubleshooting network adapters</li>
+          <li>Configuring TCP/IP properties</li>
+          <li>Using network utilities and commands</li>
+          <li>Configuring routers and routing protocols</li>
+          <li>Configuring switches and VLANs</li>
+          <li>Implementing wireless networking</li>
+          <li>Configuring network security features</li>
+          <li>Setting up firewalls and access control lists</li>
+          <li>Implementing VPNs and remote access</li>
+          <li>Monitoring network performance</li>
+          <li>Troubleshooting network connectivity issues</li>
+          <li>Configuring network services (DHCP, DNS)</li>
+          <li>Implementing network segmentation</li>
+          <li>Configuring cloud networking</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Security Tooling</h3>
+        <p>Tools and exercises including vulnerability scans, exploitation labs, and secure programming examples. Currently working with TryHackMe to obtain SOC Operations certification.</p>
+      </article>
+      <article class="card">
+        <img src="assets/images/port-scanner.svg" alt="Port scanner" style="max-height:120px;margin-bottom:10px">
+        <h3>Port Scanner</h3>
+        <p>A minimal TCP port scanner (local enumeration). Download the script or view the source on GitHub.</p>
+        <p><a href="projects/port-scanner/Portscanner2.py" target="_blank" rel="noopener">Download script →</a> · <a href="https://github.com/paytonirvin03-creator/Port-scanner-" target="_blank" rel="noopener">View on GitHub →</a></p>
+      </article>
+    </div>
+  </main>
+
+  <section>
+    <h2 style="text-align: center;">Spinning Model Projects</h2>
+    <div style="display: flex; gap: 20px; justify-content: center;">
+      
+      <div class="card">
+        <div id="shield-3d" style="width: 100%; height: 300px; position: relative;"></div>
+        <p>Spinning Vortex</p>
+      </div>
+
+      <div class="card">
+        <div id="kali-3d" style="width: 100%; height: 300px; position: relative;"></div>
+        <p>Sphere (spinning)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Payton Irvin</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/three-models.js"></script>
+</body>
+</html>
